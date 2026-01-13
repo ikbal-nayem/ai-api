@@ -5,7 +5,7 @@ pipeline {
         REGISTRY="imagerepo.gems.gov.bd"
         DEPLOYMENT_ENV="prod"
         IMAGE_CREATED_BY="jenkins"
-        PROJECT_NAME="census-service"
+        PROJECT_NAME="ai-service"
         K8S_NAMESPACE="gems-prod"
 
         //Port configuration

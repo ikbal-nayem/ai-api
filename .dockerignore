@@ -8,5 +8,3 @@ venv/
 dist/
 build/
 *.egg-info/
-
-pyproject.toml

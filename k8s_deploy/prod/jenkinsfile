@@ -69,8 +69,8 @@ post {
         stage('Maven Build') {
             steps {
                     sh '''
-                    echo "release.version=Release Version is $IMAGE_VERSION" > src/main/resources/release-note.properties
-                    echo "release.lastcommitid=Release Version is $(git log -1|head -1|awk -F ' ' '{print $NF}')" >> src/main/resources/release-note.properties
+                    echo "release.version=Release Version is $IMAGE_VERSION" > k8s_deploy/prod/release-note.properties
+                    echo "release.lastcommitid=Release Version is $(git log -1|head -1|awk -F ' ' '{print $NF}')" >> k8s_deploy/prod/release-note.properties
                     echo "Maven build for Tag.....$GIT_TAG"
                     docker run --rm \
                     -v $PROJECT_LOCATION:/app \

@@ -32,7 +32,10 @@ spec:
             memory: "4Gi"
         ports:
           - name: $CONTAINER_PORT_NAME
-            containerPort: $K8S_CONTAINER_PORT              
+            containerPort: $K8S_CONTAINER_PORT  
+        envFrom:
+          - configMapRef:
+              name: $K8S_CONFIGMAP_NAME                       
       imagePullSecrets:
       - name: imagerepo.gems.gov.bd
       hostAliases:

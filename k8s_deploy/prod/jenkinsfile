@@ -14,8 +14,8 @@ pipeline {
         K8S_PORT_NAME="http"
         
         //Application configurations and credentials
-//        K8S_CONFIGMAP_NAME="census-service-config"
-//        K8S_SECRET_NAME="census-service-secret"
+        K8S_CONFIGMAP_NAME="census-service-config"
+        K8S_SECRET_NAME="census-service-secret"
 //        K8S_NODE_PORT=31813
      
         //Host specific configuration

@@ -10,6 +10,7 @@ def webSearch(query: str)-> list:
         headers={"Authorization": f"Bearer {WEB_SEARCH_TOKEN}"}
     )
     if response.status_code == 200:
+        print(f"✅ Web search successful. {len(response.json().get("results", []))} results found.")
         return response.json().get("results", [])
     print(f"❌ Web search failed with status code {response.status_code}: {response.text}")
     return []

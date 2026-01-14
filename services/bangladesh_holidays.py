@@ -18,9 +18,6 @@ def getHolidaysJSON(year: int):
     context_text = "\n".join(
         [f"Source: {r.get("title")}\nContent: {r.get("content")}\nURL: {r.get("url")}" for r in search_results]
     )
-
-    print("✅ Search complete. Processing data with LLM...")
-
     response = client.chat.completions.create(
         model=MODEL,
         messages=[{'role': 'user', 'content': prompt + "\n" + context_text}],
